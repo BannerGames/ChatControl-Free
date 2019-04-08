@@ -1,0 +1,28 @@
+#
+# Machine generated plugin properties.
+#
+# ** Changing them will break your plugin and is unsupported. **
+#
+name: ${project.artifactId}
+main: ${mainClass}
+version: ${project.version}
+api-version: 1.13
+author: ${author}
+soft-depend: [AuthMe, Essentials, Multiverse-Core, ProtocolLib, SimpleClans, Towny, Vault]
+
+# Default commands
+commands: 
+  chatcontrol:
+    aliases: [chc]
+    description: Main ChatControl command. Type /chatcontrol list for commands.
+
+# Default permissions
+permissions:
+    chatcontrol.notify.overrideranged:
+        default: false
+    chatcontrol.notify.whenmentioned:
+        default: true
+        description: Play a sound when the player is notified and the function is enabled.
+    chatcontrol.broadcaster.view:
+        default: true
+        description: View timed messages from auto broadcaster.
