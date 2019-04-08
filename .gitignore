@@ -22,9 +22,6 @@ src/main/java/org/mineacademy/chatcontrol/util/*
 proguard/
 proguard.conf
 pom.xml
-pom.xml/
-*pom.xml/
-*pom.*
 
 
 *.pydevproject
