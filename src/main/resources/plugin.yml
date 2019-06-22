@@ -3,7 +3,7 @@
 #
 # ** Changing them will break your plugin and is unsupported. **
 #
-name: ${project.artifactId}
+name: ChatControl
 main: ${mainClass}
 version: ${project.version}
 api-version: 1.13
