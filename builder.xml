@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<project name="ChatControl-Free" default="Build">
+
+	<!-- Set where to put the plugin for Mac -->
+	<condition property="serverPath" value="D:\Test servers\${mc_version}">
+		<os family="windows" />
+	</condition>
+
+	<!-- Set where to put the plugin for Windows -->
+	<condition property="serverPath" value="\Users\kangarko\Desktop\Server">
+		<os family="mac" />
+	</condition>
+
+	<!-- Compile the plugin and its dependencies -->
+	<target name="Build">
+		<jar jarfile="${serverPath}\plugins\${ant.project.name}.jar" basedir="./target/classes/" includes="**/*">
+		</jar>
+	</target>
+
+</project> 
