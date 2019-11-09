@@ -108,16 +108,16 @@ Chat:
 
     # Default chat message format.
     # The prefix has to include the 'pl_' because without it the plugin's prefix name will be given instead.
-    Message_Format: '%pl_prefix%player:%pl_suffix %message'
+    Message_Format: '{pl_prefix}{player}:{pl_suffix} {message}'
 
     # If Ranged_Mode is enabled, this format is used when a message is printed to the global chat by prefixing it with '!'
     # NB: Player must also have the 'chatcontrol.chat.global' permission to speak to the global chat.
-    Global_Message_Format: '&8[GLOBAL]&f %pl_prefix%player:%pl_suffix %message'
+    Global_Message_Format: '&8[GLOBAL]&f {pl_prefix}{player}:{pl_suffix} {message}'
 
     # If Ranged_Mode is enabled, this format is used when a player with 'chatcontrol.chat.spy' permission receives ranged message
     # that he normally should't see.
     # To spy on private messages (e.g. /tell or /mail), use Essentials /socialspy feature.
-    Spy_Message_Format: '&8SPY: [%world&8]&f %pl_prefix%player:%pl_suffix %message'
+    Spy_Message_Format: '&8SPY: [{world}&8]&f {pl_prefix}{player}:{pl_suffix} {message}'
 
     # If enabled and a players write a message, it will only be sent to players
     # within distance of the player specified in Range
@@ -149,8 +149,8 @@ Clear:
 
 Messages:
   # Use 'default' to not modify, 'hide' to not display or write a custom message
-  # Variables: %player %pl_suffix %pl_prefix (when Vault is installed)
-  # %countrycode and %countryname when AuthMe is installed
+  # Variables: {player} {pl_suffix} {pl_prefix} (when Vault is installed)
+  # {countrycode} and {countryname} when AuthMe is installed
   Join: default
   Quit: default
   Kick: default
@@ -168,7 +168,7 @@ Messages:
     # then it will be filled again and so on.
     Random_No_Repeat: true
     
-    # Prefix and suffix supports variables %player (player name) and %world (world name)
+    # Prefix and suffix supports variables {player} (player name) and {world} (world name)
     Prefix: '&8[&2Tip&8]&2'
     Suffix: ''
     Delay_Seconds: 180
@@ -179,13 +179,13 @@ Messages:
       
       # Messages displayed in all worlds.
       global:
-      - Hey, %player, did you know that this server is running ChatControl?
+      - Hey, {player}, did you know that this server is running ChatControl?
       - 'Visit developer website: &ahttps://goo.gl/CT3Zdl'
       
       # In this world will be displayed both global messages and these specified below.
       hardcore:
       - Grief is not permitted what-so-ever and every griefer will be banned.
-      - Can you survive the night on %world world?
+      - Can you survive the night on {world} world?
       
       # In this world will be displayed messages included from hardcore world.
       hardcore_nether:
@@ -330,8 +330,8 @@ Groups:
     vip:
       # Notice if you are an OP you need to negate those permissions
       # otherwise it will be applied on you, too!
-      Join_Message: "&6[VIP] &e%player has joined the game"
-      Leave_Message: "&6[VIP] &e%player has left the game"
+      Join_Message: "&6[VIP] &e{player} has joined the game"
+      Leave_Message: "&6[VIP] &e{player} has left the game"
       Kick_Message: none
 
 Updater:
@@ -402,7 +402,7 @@ Reset_Cache_On_Quit: false
 # Before that, please ensure you've saved the file in an encoding that supports new line operator.
 Enforce_New_Line: false
 
-# Search for players geographical information for %countryname and %countrycode variables?
+# Search for players geographical information for {countryname} and {countrycode} variables?
 # Disable to improve performance a tiny bit.
 Lookup_Geo_Data: true
 

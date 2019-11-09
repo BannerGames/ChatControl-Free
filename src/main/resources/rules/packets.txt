@@ -14,7 +14,7 @@
 # dont verbose (Rule won't print to the console. Ignores 'Verbose' option in settings.yml.)
 # then deny (Hides the message - cancels the packet.)
 #
-# For valid variables (e.g. %world) check the header in the rules.txt file!
+# For valid variables (e.g. {world}) check the header in the rules.txt file!
 #
 # Supports color codes with & and unicode characters when saved in UTF-8 encoding.
 # -------------------------------------------------------------------------------
@@ -27,4 +27,4 @@
 match ^I'm sorry, but you do not have permission to perform this.*|^You do not have access to that command.
 dont verbose
 then rewrite &cInsufficient permission.
-#then rewritein hardcore &cThis command is not available in %world world.
+#then rewritein hardcore &cThis command is not available in {world} world.

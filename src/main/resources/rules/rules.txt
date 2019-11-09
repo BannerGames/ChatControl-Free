@@ -15,7 +15,7 @@
 # then rewrite <message|message2> (A message that replaces the entire checked message.)
 #                                         (Chosen randomly from the messages divided by |)
 # then deny (Cancel the player's message from appearing. See settinsg.yml for configuration on specific events.)
-# then console <command|command2|command3> (Commands to execute as the console. Use %player to get player's name. Split multiple commands by |)
+# then console <command|command2|command3> (Commands to execute as the console. Use {player} to get player's name. Split multiple commands by |)
 # then warn <message> (A message sent to the player.)
 # then kick <optionalResaon> (Kick the player with an optional message.)
 # then notify <permission> <message> (Send a message to all players with the permission.)
@@ -24,8 +24,8 @@
 # handle as <handler_name> (Launch actions specified in handlers.yml. NOTICE: This must be as a last operator in the rule!)
 #
 # Valid variables:
-# %player (Player's name. Without prefix and suffix.)
-# %world (Player's world.)
+# {player} (Player's name. Without prefix and suffix.)
+# {world} (Player's world.)
 #
 # Supports color codes with '&' character.
 # Accepts unicode characters when saved in UTF-8 encoding (tested on Notepad++).
@@ -57,7 +57,7 @@ handle as advertisement
 #then warn Watch your language please.
 # #Before commenting out check if you have Points enabled in settings.yml
 #then points swear 1
-#then notify chatcontrol.notify.rulesalert &8[&7%ruleID&8] &7%player: &f%message
+#then notify chatcontrol.notify.rulesalert &8[&7{ruleID}&8] &7{player}: &f{message}
 #then replace fridge|bridge
 
 # Ass and asshole filter. Words like glass are ignored. Commented out since its filtered below.
@@ -67,7 +67,7 @@ handle as advertisement
 # Swastika filter
 match \u534D|\u5350
 then kick &cDisallowed characters in the chat
-then notify chatcontrol.notify.rulesalert &8[&7Swastika&8] &7%player: &f%message
+then notify chatcontrol.notify.rulesalert &8[&7Swastika&8] &7{player}: &f{message}
 then deny
 
 # -------------------------------------------------------------------------------
