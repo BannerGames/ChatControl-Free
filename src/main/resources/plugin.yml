@@ -4,7 +4,7 @@
 # ** Changing them will break your plugin and is unsupported. **
 #
 name: ChatControl
-main: ${mainClass}
+main: ${main.class}
 version: ${project.version}
 api-version: 1.13
 author: ${author}
